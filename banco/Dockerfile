@@ -1,0 +1,16 @@
+FROM maven:3.8.5-openjdk-17
+
+WORKDIR /banco
+COPY . .
+
+ENV MYSQL_ROOT_PASSWORD=12345678
+ENV MYSQL_DATABASE=banco
+ENV MYSQL_PASSWORD=12345678
+ENV DB_USERNAME=root
+
+RUN mvn clean package -DskipTests
+
+EXPOSE 3310
+EXPOSE 8080
+
+CMD mvn spring-boot:run
