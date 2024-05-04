@@ -1,6 +1,6 @@
 const keycloakConfig = {
-    url: 'https://authdesa.duckdns.org:22002',
-    realm: 'DESA2023',
+    url: 'http://localhost:8088',
+    realm: 'banco',
     clientId: 'sparta-front',
   };
   

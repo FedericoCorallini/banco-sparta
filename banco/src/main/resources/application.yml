@@ -14,13 +14,13 @@ spring:
   security:
     oauth2:
       resourceserver:
-        jwt-set-uri: https://authdesa.duckdns.org:22002/realms/DESA2023/protocol/openid-connect/certs
+        jwt-set-uri: http://localhost:8088/realms/banco/protocol/openid-connect/certs
         jwt:
-          issuer-uri: https://authdesa.duckdns.org:22002/realms/DESA2023
+          issuer-uri: http://localhost:8088/realms/banco
 
 securitySchemes:
   keycloak:
     type: oauth2
     flows:
       implicit:
-        authorizationUrl: https://authdesa.duckdns.org:22002/realms/DESA2023/protocol/openid-connect/certs
+        authorizationUrl: http://localhost:8088/realms/banco/protocol/openid-connect/certs
